@@ -151,15 +151,15 @@ def send_email(report_content: str, report_path: str, post_count: int, sendgrid_
     )
 
     message = Mail(
-        from_email="vibralstudio@gmail.com",
-        to_emails="vibralstudio@gmail.com",
+        from_email="contact@vibralstudio.com",
+        to_emails="contact@vibralstudio.com",
         subject=subject,
         plain_text_content=body,
     )
 
     sg = SendGridAPIClient(sendgrid_key)
     response = sg.send(message)
-    print(f"Email sent → vibralstudio@gmail.com (status {response.status_code})")
+    print(f"Email sent → contact@vibralstudio.com (status {response.status_code})")
 
 
 def main():
